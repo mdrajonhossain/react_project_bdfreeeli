@@ -1,0 +1,52 @@
+.imageloop{
+    overflow-y: auto;
+    height: 440px;
+}
+
+.imagelooppic{
+    float: left;
+    width: 10%;
+    padding: 10px 0px 0px 10px;
+    border-radius: 5%;
+}
+
+
+.card:hover{
+    border: 1px solid #023d67;
+}
+
+.cardtext{
+    color: gray;
+    font-size: 13px;
+}
+
+.serarchingimage{
+    height: 30px;
+}
+
+.imagefile{
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.imagesearchinput{
+    width: 83%;
+    margin-left: 10px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
