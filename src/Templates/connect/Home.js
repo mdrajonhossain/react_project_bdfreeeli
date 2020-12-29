@@ -16,6 +16,7 @@ import Settingpage from "./Setting/Settingpage";
 import Userroominput from "./Userroominput";
 import Chathovertag from "./Chathovertag";
 import Select_tag from "./Select_tag";
+import Chacklistpage from "./Chacklistpage";
 
 
 
@@ -26,7 +27,7 @@ var car = [
    {username:"Alamgir Hossain", model:"500", color:"white"},
    {username:"Manzurul  Alam", model:"500", color:"white"},
    {username:"Jahirul Islam", model:"500", color:"white"},
-   {username:"Dalim Chowdhury", model:"500", color:"white"},
+   {username:"Dalim Chowdhur", model:"500", color:"white"},
    {username:"Ali  Azam", model:"500", color:"white"},
    {username:"SM Jubayer", model:"500", color:"white"},
    {username:"Kallol Ray94", model:"500", color:"white"},
@@ -122,16 +123,41 @@ function activateLasers(event) {
     }
 
     function searsing() {
-        var text = document.getElementsByClassName('ss');
+        var text = document.getElementsByClassName('voice_callicon');
         for (var i = 0; i < text.length; i ++) {
             text[i].style.display = 'none';
         }
-        setSearchbox(!searchbox)
+        var text = document.getElementsByClassName('tt');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'none';
+        }
+        // setSearchbox(!searchbox)
+
+        var text = document.getElementsByClassName('conversationsearch');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'block';
+        }
+
     }
 
+
+
+
+
+
+
+
+
     function searsingslose() {
-        setSearchbox(!searchbox)
-        var text = document.getElementsByClassName('ss');
+        var text = document.getElementsByClassName('conversationsearch');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'none';
+        }
+        var text = document.getElementsByClassName('voice_callicon');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'block';
+        }
+        var text = document.getElementsByClassName('tt');
         for (var i = 0; i < text.length; i ++) {
             text[i].style.display = 'block';
         }
@@ -152,10 +178,6 @@ function activateLasers(event) {
         for (var i = 0; i < text.length; i ++) {
             text[i].style.display = 'block';
         }
-
-
-
-
     }
 
     const profiletab = () => {
@@ -178,6 +200,39 @@ function activateLasers(event) {
 
         document.getElementById("userquary").innerText =e.username;
     }
+
+
+    const Chacklist = () => {
+        var text = document.getElementsByClassName('voice_callicon');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'none';
+        }
+        var text = document.getElementsByClassName('tt');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'none';
+        }
+
+        var text = document.getElementsByClassName('chacklistmanubar');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'block';
+        }
+
+        var text = document.getElementsByClassName('buttomchatinput');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'none';
+        }
+
+        var text = document.getElementsByClassName('chackpage');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'block';
+        }
+
+
+
+
+    }
+
+
 
 
 return (
@@ -266,105 +321,158 @@ return (
 
    <div className="rightbare" style={{ display: filepage ? 'block' : 'none' }}>
       <div className="rightsitetopbar">
-         <img src="https://wfss001.freeli.io/profile-pic/Photos/img.png" className="userimage"/>
-         <span className='username' onClick={profiletab}><b id="userquary">User 904994</b></span>&nbsp;&nbsp;
-          <div className="condropdown" style={{ display: searchbox ? 'block' : 'none' }}>
-              <div className="dropdown">
-                <span id="dropdownMenuButton" data-toggle="dropdown">
-                    <img src="https://bd.freeli.io/images/basicAssets/search_icon_for_todo_chat.svg" className="searchicon"/>
-                    <span>Conversation</span>
-                </span>
 
-                  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a className="dropdown-item" href="#" onClick={filepagee}>Message tag(s)</a>
-                      <a className="dropdown-item" href="#" onClick={filepagee}>Image(s)</a>
-                      <a className="dropdown-item" href="#" onClick={filepagee}>Vedio(s)</a>
-                      <a className="dropdown-item" href="#" onClick={filepagee}>Audio(s)</a>
-                      <a className="dropdown-item" href="#" onClick={filepagee}>File(s)</a>
-                      <a className="dropdown-item" href="#" onClick={filepagee}>Link(s)</a>
-                      <a className="dropdown-item" href="#" onClick={filepagee}>View By Tag(s)</a>
-                  </div>
+          {/*=====================*/}
+          <nav className="navbar navbar-expand-lg">
+              <img src="https://wfss001.freeli.io/profile-pic/Photos/img.png" className="userimage"/>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                  <ul className="navbar-nav">
+                      <li className="nav-item active">
+                          <div className='username' onClick={profiletab}><b id="userquary">User 904994</b></div>
+                      </li>
+                      <li className="nav-item voice_callicon" style={{display:'block'}}>
+                          <span className="leftline"></span>
+                          <img onClick={voicecall} src="https://bd.freeli.io/images/basicAssets/voice_call_for_active.svg" className="voice_call"/>
+                          <img onClick={videocall} src="https://bd.freeli.io/images/basicAssets/video_call_for_active.svg" className="voice_call"/>
+                          <img src="https://bd.freeli.io/images/basicAssets/custom_not_pin.svg" className="voice_call"/>
+                          <img src="https://bd.freeli.io/images/basicAssets/Flagged.svg" className="voice_call"/>
+                          <img src="https://bd.freeli.io/images/basicAssets/search_icon_for_todo_chat.svg" onClick={searsing} className="voice_call"/>
+                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" onClick={searsing} className="voice_call"/>
+                          <span className="leftline"></span>
+                      </li>
+                      <li className="nav-item tt" style={{display:'block'}}>
+                          <a className="nav-link filetabmanu" onClick={filepagee}>Dossier</a>
+                      </li>
+                      <li className="nav-item voice_callicon" style={{display:'block'}}>
+                          <span className="leftline"></span>
+                      </li>
+                      <li className="nav-item tt" style={{display:'block'}}>
+                          <a className="nav-link Chacklist" onClick={Chacklist}>Chacklist</a>
+                      </li>
+                      <li className="nav-item conversationsearch"  style={{display:'none'}}>
+                          <div className="Conversation">Conversation</div>
+                          <img src="https://bd.freeli.io/images/basicAssets/close_button.svg" className="closing" onClick={searsingslose}/>
+                          <input type="text" className="searche" />
+                      </li>
+
+                      <li className="nav-item voice_callicon chacklistmanubar"  style={{display:'none'}}>
+                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
+                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
+                      </li>
+
+                  </ul>
               </div>
-          </div>
+          </nav>
+
+          {/*=====================*/}
 
 
 
-          <img src="https://bd.freeli.io/images/basicAssets/close_button.svg" onClick="" className="closing"
-               style={{ display: searchbox ? 'block' : 'none' }} onClick={searsingslose}/>
+
+
+          {/*<div className="condropdown" style={{ display: searchbox ? 'block' : 'none' }}>*/}
+          {/*    <div className="dropdown">*/}
+          {/*      <span id="dropdownMenuButton" data-toggle="dropdown">*/}
+          {/*          <img src="https://bd.freeli.io/images/basicAssets/search_icon_for_todo_chat.svg" className="searchicon"/>*/}
+          {/*          <span>Conversation</span>*/}
+          {/*      </span>*/}
+
+          {/*        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">*/}
+          {/*            <a className="dropdown-item" href="#" onClick={filepagee}>Message tag(s)</a>*/}
+          {/*            <a className="dropdown-item" href="#" onClick={filepagee}>Image(s)</a>*/}
+          {/*            <a className="dropdown-item" href="#" onClick={filepagee}>Vedio(s)</a>*/}
+          {/*            <a className="dropdown-item" href="#" onClick={filepagee}>Audio(s)</a>*/}
+          {/*            <a className="dropdown-item" href="#" onClick={filepagee}>File(s)</a>*/}
+          {/*            <a className="dropdown-item" href="#" onClick={filepagee}>Link(s)</a>*/}
+          {/*            <a className="dropdown-item" href="#" onClick={filepagee}>View By Tag(s)</a>*/}
+          {/*        </div>*/}
+          {/*    </div>*/}
+          {/*</div>*/}
+
+
+
+          {/*<img src="https://bd.freeli.io/images/basicAssets/close_button.svg" className="closing"*/}
+          {/*     style={{ display: searchbox ? 'block' : 'none' }} onClick={searsingslose}/>*/}
           {/*<ContentEditable*/}
           {/*    className="searche"*/}
           {/*    style={{ display: searchbox ? 'block' : 'none' }}/>*/}
 
-          <ContentEditable
-              className="searche"
-              // innerRef={contentEditable}
-              html={''} // innerHTML of the editable div
-              disabled={false}
-              // onChange={this.handleChange} // handle innerHTML change
-              tagName='article' // Use a custom HTML tag (uses a div by default)
-              style={{ display: searchbox ? 'block' : 'none' }}
-          />
+          {/*<ContentEditable*/}
+          {/*    className="searche"*/}
+          {/*    // innerRef={contentEditable}*/}
+          {/*    html={''} // innerHTML of the editable div*/}
+          {/*    disabled={false}*/}
+          {/*    // onChange={this.handleChange} // handle innerHTML change*/}
+          {/*    tagName='article' // Use a custom HTML tag (uses a div by default)*/}
+          {/*    style={{ display: searchbox ? 'block' : 'none' }}*/}
+          {/*/>*/}
 
-              <span className="ss">
-                  <span className="leftline">
-                    <img onClick={voicecall} src="https://bd.freeli.io/images/basicAssets/voice_call_for_active.svg" className="voice_call"/>
-                    <img onClick={videocall} src="https://bd.freeli.io/images/basicAssets/video_call_for_active.svg" className="voice_call"/>
-                    <img src="https://bd.freeli.io/images/basicAssets/custom_not_pin.svg" className="voice_call"/>
-                    <img src="https://bd.freeli.io/images/basicAssets/Flagged.svg" className="voice_call"/>
-                    <img src="https://bd.freeli.io/images/basicAssets/search_icon_for_todo_chat.svg" onClick={searsing} className="voice_call"/>
-
-
-                        <span className="dropdown">
-                            <img src="https://bd.freeli.io/images/basicAssets/MoreMenu.svg" id="dropdownMenuButton" data-toggle="dropdown" className="voice_call"/>
-                              <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a className="dropdown-item" href="#">Select Message</a>
-                                  <a className="dropdown-item" href="#">Mute Notifications</a>
-                                  <a className="dropdown-item" href="#">Set Notification Tune</a>
-                                  <a className="dropdown-item" href="#">Filter</a>
-                                  <a className="dropdown-item" href="#">Clear Message(s)</a>
-                              </div>
+              {/*<div className="ss" >*/}
+              {/*    <span className="leftline">*/}
+              {/*      <img onClick={voicecall} src="https://bd.freeli.io/images/basicAssets/voice_call_for_active.svg" className="voice_call"/>*/}
+              {/*      <img onClick={videocall} src="https://bd.freeli.io/images/basicAssets/video_call_for_active.svg" className="voice_call"/>*/}
+              {/*      <img src="https://bd.freeli.io/images/basicAssets/custom_not_pin.svg" className="voice_call"/>*/}
+              {/*      <img src="https://bd.freeli.io/images/basicAssets/Flagged.svg" className="voice_call"/>*/}
+              {/*      <img src="https://bd.freeli.io/images/basicAssets/search_icon_for_todo_chat.svg" onClick={searsing} className="voice_call"/>*/}
 
 
-                         <span className="leftline">
-                            <span onClick={filepagee}>&nbsp;Files&nbsp;</span>
-                         </span>
-                         <span className="leftline">
-                             <span>Chacklist</span> &nbsp; &nbsp;
-                             <span className="top03">0/3</span>
-                         </span>
-                         </span>
-                  </span>
-                  </span>
+              {/*          <span className="dropdown">*/}
+              {/*              <img src="https://bd.freeli.io/images/basicAssets/MoreMenu.svg" id="dropdownMenuButton" data-toggle="dropdown" className="voice_call"/>*/}
+              {/*                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">*/}
+              {/*                    <a className="dropdown-item" href="#">Select Message</a>*/}
+              {/*                    <a className="dropdown-item" href="#">Mute Notifications</a>*/}
+              {/*                    <a className="dropdown-item" href="#">Set Notification Tune</a>*/}
+              {/*                    <a className="dropdown-item" href="#">Filter</a>*/}
+              {/*                    <a className="dropdown-item" href="#">Clear Message(s)</a>*/}
+              {/*                </div>*/}
+
+
+              {/*           <span className="leftline">*/}
+              {/*              <span onClick={filepagee}>&nbsp;Files&nbsp;</span>*/}
+              {/*           </span>*/}
+              {/*           <span className="leftline">*/}
+              {/*               <span>Chacklist</span> &nbsp; &nbsp;*/}
+              {/*               <span className="top03">0/3</span>*/}
+              {/*           </span>*/}
+              {/*           </span>*/}
+              {/*    </span>*/}
+              {/*</div>*/}
       </div>
 
 <Settingpage/>
       <div className="chagespeach" id="chagespeach">
+          <div className="chatmaplist">
            {
                items.map(item => {
                   return <div className="">
                      <hr />
                      <div className="today">Today {item.time}</div>
                      <div className="chateloop">
-
-                                    <img src="https://wfss001.freeli.io/profile-pic/Photos/img.png" className="textuserpic" />
-
-
-                                          <div className="mapusersite">
-                                             <span className="username" onClick={settingpage}>Md. Rajon Hossain&nbsp;</span>
-                                             <span className="details">Created on {item.date} {item.time}<i> - Delivered </i> </span>
-                                          </div>
-
-                                              <Chathovertag
-                                                  uploadfilefunction={uploadfilefunction}
-                                              />
-                                              <Select_tag/>
-
-                                              <br/>
-                                          <div className="userhovertagleft">{item.mse}</div>
+                        <img src="https://wfss001.freeli.io/profile-pic/Photos/img.png" className="textuserpic" />
+                              <div className="mapusersite">
+                                 <span className="username" onClick={settingpage}>Md. Rajon Hossain&nbsp;</span>
+                                 <span className="details">Created on {item.date} {item.time}<i> - Delivered </i> </span>
+                              </div>
+                              <Chathovertag uploadfilefunction={uploadfilefunction} />
+                              <Select_tag/>
+                              <br/>
+                              <div className="userhovertagleft">{item.mse}</div>
                         </div>
                   </div>
                })
            }
+          </div>
+
+
+          <div className="chackpage" style={{display:'none'}}>
+              {/*component add*/}
+              <Chacklistpage/>
+          </div>
+
 
       </div>
 
@@ -376,22 +484,23 @@ return (
         {/*           Conversationtab={conversationadd}/>*/}
         {/*   </div>*/}
         {/*: ""}*/}
+    <div className="buttomchatinput">
+            <div className="inputareia" style={{ display: filepage ? 'block' : 'none' }}>
+                 <img src="https://bd.freeli.io/images/basicAssets/conv-i-new-bb.png" className="textleftsite" />
+                 <ContentEditable
+                    html={message.mse}
+                    className="chate"
+                    onChange={handleChangee}
+                    contentEditable='true'/>
+            </div>
 
-        <div className="inputareia" style={{ display: filepage ? 'block' : 'none' }}>
-             <img src="https://bd.freeli.io/images/basicAssets/conv-i-new-bb.png" className="textleftsite" />
-             <ContentEditable
-                html={message.mse}
-                className="chate"
-                onChange={handleChangee}
-                contentEditable='true'/>
+        <div className="submitcacklist" style={{ display: filepage ? 'block' : 'none' }}>
+             <img onClick={teamtasksfunction} src="https://bd.freeli.io/images/basicAssets/checklist_blue.svg" className="inputsymble" /> &nbsp;
+             <img onClick={chacklistafunction} src="https://bd.freeli.io/images/basicAssets/hayven_checked.svg" className="inputsymble" style={{ border: '1px solid #023d67', borderRadius: '25px' }} /> &nbsp;
+             <img onClick={uploadfilefunction} src="https://bd.freeli.io/images/basicAssets/activeSvg/attachActive.svg" className="inputsymble" /> &nbsp;
+             <img src="https://bd.freeli.io/images/basicAssets/activeSvg/addEmojiActive.svg" className="inputsymble" /> &nbsp;
+             <img onClick={activateLasers} src="https://bd.freeli.io/images/basicAssets/circle_up_arrow.svg" className="inputsymble" id='inputsymble' />&nbsp; &nbsp;
         </div>
-
-    <div className="submitcacklist" style={{ display: filepage ? 'block' : 'none' }}>
-         <img onClick={teamtasksfunction} src="https://bd.freeli.io/images/basicAssets/checklist_blue.svg" className="inputsymble" /> &nbsp;
-         <img onClick={chacklistafunction} src="https://bd.freeli.io/images/basicAssets/hayven_checked.svg" className="inputsymble" style={{ border: '1px solid #023d67', borderRadius: '25px' }} /> &nbsp;
-         <img onClick={uploadfilefunction} src="https://bd.freeli.io/images/basicAssets/activeSvg/attachActive.svg" className="inputsymble" /> &nbsp;
-         <img src="https://bd.freeli.io/images/basicAssets/activeSvg/addEmojiActive.svg" className="inputsymble" /> &nbsp;
-         <img onClick={activateLasers} src="https://bd.freeli.io/images/basicAssets/circle_up_arrow.svg" className="inputsymble" id='inputsymble' />&nbsp; &nbsp;
     </div>
 </div>
 );
