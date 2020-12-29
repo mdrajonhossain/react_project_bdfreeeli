@@ -16,7 +16,7 @@ return (
 
             <div className="col-md-6">
                 <div className="card">
-                    aaaaaa11122
+                    4rd
                 </div>
             </div>
         </div>
