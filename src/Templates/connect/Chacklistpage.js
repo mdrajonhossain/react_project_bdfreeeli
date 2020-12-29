@@ -9,7 +9,7 @@ return (
         <div className="row">
             <div className="col-md-6">
                 <div className="card">
-                    asdfasdf
+                    rajon
                 </div>
             </div>
 
