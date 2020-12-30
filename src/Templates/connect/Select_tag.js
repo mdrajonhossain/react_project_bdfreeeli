@@ -28,10 +28,10 @@ const adddata = () => {
 }
 
 
-    useEffect(() => {
-        var dd = JSON.parse(localStorage.getItem("stortag"));
-        setAddtaglist(dd);
-    });
+    // useEffect(() => {
+    //     var dd = JSON.parse(localStorage.getItem("stortag"));
+    //     setAddtaglist(dd);
+    // });
 
     const selecttag = (e, index) => {
         document.getElementById("tagadd").value = e.name;
