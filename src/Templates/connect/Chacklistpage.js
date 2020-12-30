@@ -16,7 +16,7 @@ return (
 
             <div className="col-md-6">
                 <div className="card">
-                    4rdsdfsdfsdf111444
+                    4rdsdfsdfsdf111444rajon
                 </div>
             </div>
         </div>
