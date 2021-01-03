@@ -401,6 +401,7 @@ return (
                           <img src="https://bd.freeli.io/images/flaticon/incompleteChecklist_black.svg" className="chacklisticon"/>
                           <span className="leftline"></span>
                           <img src="https://bd.freeli.io/images/flaticon/incompleteChecklist_black.svg" className="chacklisticon"/>
+                          
                           <span className="leftline"></span>
                           <img src="https://bd.freeli.io/images/basicAssets/Flagged.svg" className="chacklisticon"/>
 
