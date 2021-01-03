@@ -227,9 +227,42 @@ function activateLasers(event) {
             text[i].style.display = 'block';
         }
 
+        var text = document.getElementsByClassName('chatmaplist');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'none';
+        }
+    }
 
 
+    const chacklistclosebutton = ()=> {
+        var text = document.getElementsByClassName('voice_callicon');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'block';
+        }
+        var text = document.getElementsByClassName('tt');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'block';
+        }
 
+        var text = document.getElementsByClassName('chacklistmanubar');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'none';
+        }
+
+        var text = document.getElementsByClassName('buttomchatinput');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'block';
+        }
+
+        var text = document.getElementsByClassName('chackpage');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'none';
+        }
+
+        var text = document.getElementsByClassName('chatmaplist');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.display = 'block';
+        }
     }
 
 
@@ -362,6 +395,12 @@ return (
                       <li className="nav-item voice_callicon chacklistmanubar"  style={{display:'none'}}>
                           <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
                           <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
+                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
+                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
+                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
+
+                          <input type="text" />
+                          <img src="https://bd.freeli.io/images/basicAssets/close_button.svg" onClick={chacklistclosebutton}className="chacklistclosebutton"/>
                       </li>
 
                   </ul>
