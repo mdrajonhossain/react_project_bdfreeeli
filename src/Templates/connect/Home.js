@@ -39,6 +39,7 @@ var car = [
    {username:"Demo2", model:"500", color:"white"}
 ];
 
+
 function Home(props) {
 
    const [items, setItems] = useState([]);
@@ -202,66 +203,73 @@ function activateLasers(event) {
     }
 
 
+
     const Chacklist = () => {
         var text = document.getElementsByClassName('voice_callicon');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'none';
+            text[i].style.display = 'var(--d0)';
         }
         var text = document.getElementsByClassName('tt');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'none';
+            text[i].style.display = 'var(--d0)';
         }
 
         var text = document.getElementsByClassName('chacklistmanubar');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'block';
+            text[i].style.display = 'var(--d1)';
         }
 
         var text = document.getElementsByClassName('buttomchatinput');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'none';
+            text[i].style.display = 'var(--d0)';
         }
 
         var text = document.getElementsByClassName('chackpage');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'block';
+            text[i].style.display = 'var(--d1)';
         }
 
         var text = document.getElementsByClassName('chatmaplist');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'none';
+            text[i].style.display = 'var(--d0)';
         }
+
+        var text = document.getElementsByClassName('chagespeach');
+        for (var i = 0; i < text.length; i ++) {
+            text[i].style.overflowX = 'hidden';
+        }
+
     }
 
 
     const chacklistclosebutton = ()=> {
         var text = document.getElementsByClassName('voice_callicon');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'block';
+            text[i].style.display = 'var(--d1)';
         }
         var text = document.getElementsByClassName('tt');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'block';
+            text[i].style.display = 'var(--d1)';
         }
 
         var text = document.getElementsByClassName('chacklistmanubar');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'none';
+            text[i].style.display = 'var(--d0)';
         }
 
         var text = document.getElementsByClassName('buttomchatinput');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'block';
+            text[i].style.display = 'var(--d1)';
         }
 
         var text = document.getElementsByClassName('chackpage');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'none';
+            text[i].style.display = 'var(--d0)';
         }
 
         var text = document.getElementsByClassName('chatmaplist');
         for (var i = 0; i < text.length; i ++) {
-            text[i].style.display = 'block';
+            text[i].style.display = 'var(--d1)';
         }
     }
 
@@ -401,7 +409,7 @@ return (
                           <img src="https://bd.freeli.io/images/flaticon/incompleteChecklist_black.svg" className="chacklisticon"/>
                           <span className="leftline"></span>
                           <img src="https://bd.freeli.io/images/flaticon/incompleteChecklist_black.svg" className="chacklisticon"/>
-                          
+
                           <span className="leftline"></span>
                           <img src="https://bd.freeli.io/images/basicAssets/Flagged.svg" className="chacklisticon"/>
 

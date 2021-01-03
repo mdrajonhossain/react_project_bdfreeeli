@@ -1,6 +1,72 @@
+.cards{
+    padding: 25px;
+    height: 250px;
+    color: #023d67;
+}
 
 
 .card{
-    color:red;
-    top: 20px;
+    height: 210px;
+    box-shadow: rgb(17 19 17 / 15%) 0px 43px 223px 19px;
+    border-top: none;
 }
+
+.card:hover{
+    height: 210px;
+    box-shadow: rgb(17 19 17 / 15%) 0px 43px 223px 19px;
+    background: #d9e2e8;
+    border: none;
+}
+
+.chacklistuser{
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.chacklisttime{
+    padding-left: 30px;
+    font-size: 15px;
+}
+
+.chacklistuserimage{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+}
+
+.chacklisttext{
+    z-index: 3;
+    position: relative;
+    left: 45px;
+    top: -35px;
+
+}
+.chacklistarrowtexticon{
+    height: 42px;
+    width: 42px;
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 6px;
+    float: left;
+    margin-top: 20px;
+}
+
+.Text{
+    margin-top: 30px;
+    position: relative;
+    font-size: 25px;
+}
+
+.Textdiv{
+    position: relative;
+    width: 380px;
+    font-size: 15px;
+    text-align: justify-all;
+    top: 1px;
+    margin-left: 30px;
+}
+
+/*last*/

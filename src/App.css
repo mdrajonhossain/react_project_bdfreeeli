@@ -1,3 +1,10 @@
+:root{
+	--d0:none;
+	--d1:block;
+	--dx:display;
+}
+
+
 body{
 	font-family: 'OpenSans-Regular';
 	font-size: 14px;
