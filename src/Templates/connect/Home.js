@@ -393,13 +393,19 @@ return (
                       </li>
 
                       <li className="nav-item voice_callicon chacklistmanubar"  style={{display:'none'}}>
-                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
-                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
-                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
-                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
-                          <img src="https://bd.freeli.io/images/basicAssets/activeSvg/more_menuActive.svg" className="voice_call"/>
+                          <span className="leftline"></span>
+                          <img src="https://bd.freeli.io/images/flaticon/incompleteChecklist_black.svg" className="chacklisticon"/>
+                          <span className="leftline"></span>
+                          <img src="https://bd.freeli.io/images/flaticon/incompleteChecklist_black.svg" className="chacklisticon"/>
+                          <span className="leftline"></span>
+                          <img src="https://bd.freeli.io/images/flaticon/incompleteChecklist_black.svg" className="chacklisticon"/>
+                          <span className="leftline"></span>
+                          <img src="https://bd.freeli.io/images/flaticon/incompleteChecklist_black.svg" className="chacklisticon"/>
+                          <span className="leftline"></span>
+                          <img src="https://bd.freeli.io/images/basicAssets/Flagged.svg" className="chacklisticon"/>
 
-                          <input type="text" />
+
+                          <input type="text" className="chacklistmanubarinput" placeholder="Type and enter to search checklist"/>
                           <img src="https://bd.freeli.io/images/basicAssets/close_button.svg" onClick={chacklistclosebutton}className="chacklistclosebutton"/>
                       </li>
 
@@ -407,7 +413,7 @@ return (
               </div>
           </nav>
 
-          {/*=====================*/}ss
+          {/*=====================*/}
 
 
 
